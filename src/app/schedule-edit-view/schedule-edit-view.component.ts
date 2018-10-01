@@ -9,13 +9,13 @@ export class ScheduleEditViewComponent implements OnInit {
 
   constructor(public appService : AppService) { }
   table : Array<any> = [
-    {day:"mon" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"tue" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"wed" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"thu" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"fri" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"sat" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"sun" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"mon" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"tue" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"wed" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"thu" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"fri" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"sat" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {mess_day:"sun" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
   ];
   ngOnInit() {
   }
