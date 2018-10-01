@@ -1,0 +1,29 @@
+<table class="table ">
+    <thead class="thead-light">
+      <tr>
+        <th><b>Day</b></th>
+        <th><b>Breakfast</b></th>
+        <th><b>Lunch</b></th>
+        <th><b>Snacks</b></th>
+        <th><b>Dinner</b></th>
+  
+      </tr>
+  
+    </thead>
+    <tbody>
+      <tr *ngFor = "let tab of table">
+        
+        <th>{{tab.mess_day}}</th>
+        <th><input type="text" class="form-control" [(ngModel)]="tab.breakfast" name="breakfast"></th>
+        <th><input type="text" class="form-control" [(ngModel)]="tab.lunch" name="lunch"></th>
+        <th><input type="text" class="form-control" [(ngModel)]="tab.snacks" name="snacks"></th>
+        <th><input type="text" class="form-control" [(ngModel)]="tab.dinner" name="Dinner"></th>
+       
+      </tr>
+  
+    </tbody>
+  </table>
+  
+  <div class="container" style="text-align:center">
+    <button class="btn-primary" (click)="createSchedule()">Save Schecudule</button>
+  </div>

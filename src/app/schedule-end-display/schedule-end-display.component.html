@@ -1,0 +1,23 @@
+<table class="table ">
+  <thead class="thead-light">
+    <tr>
+      <th><b>Day</b></th>
+      <th><b>Breakfast</b></th>
+      <th><b>Lunch</b></th>
+      <th><b>Snacks</b></th>
+      <th><b>Dinner</b></th>
+
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor = "let tab of table">
+      <th><b>{{tab.day}}</b></th>
+      <th>{{tab.breakfast}}</th>
+      <th>{{tab.lunch}}</th>
+      <th>{{tab.snacks}}</th>
+      <th>{{tab.dinner}}</th>
+    </tr>
+
+  </tbody>
+</table>
