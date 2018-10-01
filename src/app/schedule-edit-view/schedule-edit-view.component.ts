@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AppService } from './../app.service'
 @Component({
   selector: 'app-schedule-edit-view',
   templateUrl: './schedule-edit-view.component.html',
@@ -7,17 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleEditViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public appService : AppService) { }
   table : Array<any> = [
-    {day:"monday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"tuesday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"wednesday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"thrusday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"friday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"saturday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
-    {day:"sunday" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"mon" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"tue" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"wed" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"thu" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"fri" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"sat" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
+    {day:"sun" , breakfast:"poha" , lunch:"rice" , snacks:"biscuits" , dinner: "roti"},
   ];
   ngOnInit() {
+  }
+
+  createSchedule(){
+    this.appService.createSchecule(this.table).then((res)=>{
+      console.log(res);
+    })
   }
 
 }
