@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit {
   username : string = "";
   ngOnInit() {
     if(this.userService.isAuthenticated()){
-        this.username = this.userService.user.username;
+        this.userService.userSubject.subscribe((res)=>{
+          this.username = res.username;
+        })
     }
   }
 

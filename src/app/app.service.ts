@@ -29,7 +29,9 @@ export class AppService {
     return this.http.post(this.url+'schedule/' , JSON.stringify(data) ,{headers:this.headers(this.userService.user.token)})
     .toPromise()
     .then((res)=>{
-      console.log(res);
+      res=res.json()
+      console.log(res["body"]);
+      return res["body"];
     })
     .catch((err)=>{
       console.log(err);
